@@ -1,0 +1,34 @@
+口
+client - Notepad
+File Edit
+Format View Help
+import java.net.*; import java.io.*;
+class client
+public static void main(String argslI)throws Exception
+System.out.println("Start Chat With Server");
+DataInputStream dis new DatalnputStream(System.in);
+Socket ss- new Socket("localhost",2002);
+DataInputStream diss-new DatalnputStreamss.getInputStreamO);
+DataOutputStream dos new DataOutputStream(ss.getOutputStreamO);
+String str;
+while(true) {
+System.out.printin("n Client Msg*: "); str-dis.readLine; dos.writeBytes(str+"n");
+System.out.println("n Server Response:*");
+System.out.println(diss.readLine);
+if(str. equals IgnoreCase("bye"))
+break;
+
+
+Server
+
+java.net.*; import java.io.* class server
+public static void main (String args[])throws Exception
+ServerSocket s=new ServerSocket (2002); socket ss=s accept();
+DataInputStream dis-new DataInputStream (System. in) ;
+DataInputStream diss=new DataInputStream(ss.getInputStream)) ;
+DataOutputStream dos=new DataOutputStream(ss.getOutputStream());
+String stri while true)f
+System.out. println("\n Client Msg*::");
+System. out. println(diss.readLine());
+System. out println("\n Server Response:*:"); str=dis. readLine();
+dos writeBytes(str+"\n");
