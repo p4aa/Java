@@ -1,0 +1,39 @@
+/*‹applet code="SLipSB.class" width=500 height=500></applet›*/ import java.awt.*;
+import java.applet. *;
+public class Slip5B extends Applet private int f=0; private Traffic t1; public void init()
+t1-new Traffic();
+t1. start();
+public void paint (Graphics g)
+switch (f)
+case 0:
+g. setColor (Color.red);
+g. fillOval (100,100,50,50);
+g. setColor (Color.black);
+g. fillOval (100,170,50,50); break;
+case 1:
+g. setColor (Color.black);
+g. fillOval (100,100,50,50) ;
+g. fillOval (100,240,50,50);
+g. setColor (Color.yellow);
+g. filloval(100,170,50,50); break;
+case 2:
+g. fillOval (100,100,50,50);
+g. fillOval (100,240,50,50);
+g. setColor (Color-yellow);
+g. fi110val (100,170,50, 50); break;
+g. setColor (Color black);
+g. T1110val (100,100,50,50);
+g. F1110val (100,170,50,50) ;
+g. setColor (Color green);
+g. fillOval (100,240,50,50); break;
+｝
+class
+Traffic extends Thread
+public void run ()
+while (true)
+f=(f+1)%3; I
+repaint();
+tryt
+Thread. sleep (500) ;
+}catch (Exception e)(}
+}}}}
